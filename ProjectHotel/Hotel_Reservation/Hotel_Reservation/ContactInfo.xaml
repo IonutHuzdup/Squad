@@ -1,0 +1,14 @@
+﻿<Window x:Class="Hotel_Reservation.ContactInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hotel_Reservation"
+        mc:Ignorable="d"
+        Title="Contact Information" Height="271.607" Width="587.857">
+    <Grid>
+        <TextBlock x:Name="textBlock" FontSize="25" HorizontalAlignment="Left" Margin="10,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="180"><Run Text="Adresa: Brasov – Romania "/><LineBreak/><Run Text="Rezervari: "/><LineBreak/><Run Text="Tel: +40 268 418 920 "/><LineBreak/><Run Text="Fax: +40 268 472 999 "/><LineBreak/><Run Text="Email: squadhotel@baba-palace.ro"/></TextBlock>
+        <Label x:Name="label" FontSize="25" Content="Squad HOTEL" HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

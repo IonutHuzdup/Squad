@@ -1,0 +1,29 @@
+﻿<Window x:Class="Hotel_Reservation.AddRoomWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hotel_Reservation"
+        mc:Ignorable="d"
+        Title="Add Room" Height="286.071" Width="476.965" Background="Black">
+    <Grid>
+        <Button x:Name="button" Command="{Binding UploadCommand}" Content="Upload Room" HorizontalAlignment="Left" Margin="354,212,0,0" VerticalAlignment="Top" Width="83" Height="26"/>
+        <Label x:Name="label" Foreground="White" Content="Room Name:" HorizontalAlignment="Left" Margin="40,39,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox" SelectedItem="{Binding Name_Room , Mode=OneWayToSource}" HorizontalAlignment="Left" Margin="225,39,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Single Room"></ComboBoxItem>
+            <ComboBoxItem Content="Double Room"></ComboBoxItem>
+            <ComboBoxItem Content="Double Double Room"></ComboBoxItem>
+            <ComboBoxItem Content="Twin Room"></ComboBoxItem>
+            <ComboBoxItem Content="Suite Room"></ComboBoxItem>
+            <ComboBoxItem Content="Studio Room"></ComboBoxItem>
+            <ComboBoxItem Content="Apartment"></ComboBoxItem>
+        </ComboBox>
+        <Label x:Name="label1" Foreground="White" Content="Image Paths:" HorizontalAlignment="Left" Margin="40,95,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Foreground="White" Content="Insert each image path with a space inbetween the paths!" HorizontalAlignment="Left" Margin="40,70,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="225,100,0,0" TextWrapping="Wrap" Text="{Binding ImagePaths}" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label3" Foreground="White" Content="How many Rooms of this type will be added?" HorizontalAlignment="Left" Margin="40,144,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="40,174,0,0" TextWrapping="Wrap" Text="{Binding No_Rooms}" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button1" Content="Delete" Command="{Binding DeleteCommand}" HorizontalAlignment="Left" Margin="43,212,0,0" VerticalAlignment="Top" Width="75" Height="26"/>
+
+    </Grid>
+</Window>
