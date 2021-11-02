@@ -88,7 +88,7 @@
         <Image x:Name="image6" Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="139.6,0.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100"/>
         <Image x:Name="image7"  Grid.Column="2" HorizontalAlignment="Left" Height="225" Margin="20,210.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="364" Grid.RowSpan="2"/>
         <Image x:Name="image8"  Grid.Column="1" HorizontalAlignment="Left" Height="282" Margin="2.8,10.8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="580"/>
-        <Label x:Name="label4" Foreground="White" Content="BABA'S HOTEL" Grid.Column="1" HorizontalAlignment="Center" Margin="46.2,10.4,83,0" Grid.Row="1" VerticalAlignment="Top" Height="96" Width="466" FontSize="70"/>
+        <Label x:Name="label4" Foreground="White" Content="Squad HOTEL" Grid.Column="1" HorizontalAlignment="Center" Margin="46.2,10.4,83,0" Grid.Row="1" VerticalAlignment="Top" Height="96" Width="466" FontSize="70"/>
         <Label x:Name="label5" Visibility="{Binding IsAuthenticated, Converter={StaticResource BooleanToVisibilityConverter}}" BorderBrush="MistyRose" Foreground="White" Content="User connected: " Grid.Column="1" HorizontalAlignment="Left" Margin="9.8,297.8,0,0" Grid.Row="2" VerticalAlignment="Top"/>
         <Label x:Name="label6" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="84.8,328.8,0,0" Grid.Row="2" VerticalAlignment="Top"/>
         <Label x:Name="label7" BorderBrush="MistyRose" Foreground="White" Content="{Binding CurrUser.FirstName}" Grid.Column="1" HorizontalAlignment="Left" Margin="127.8,328.8,0,0" Grid.Row="2" VerticalAlignment="Top"/>
