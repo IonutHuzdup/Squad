@@ -80,5 +80,10 @@ namespace Test
             dataGridView1.DataSource = dataSet.Tables[0];
             connection.Close();
         }
+
+        private void Form7_Load(object sender, EventArgs e)
+        {
+            populate();
+        }
     }
 }

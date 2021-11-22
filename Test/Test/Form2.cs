@@ -54,5 +54,12 @@ namespace Test
             form4.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form7 form4 = new Form7();
+            form4.Show();
+            this.Hide();
+        }
     }
 }
