@@ -30,6 +30,33 @@ namespace Test
             InitializeComponent();
         }
 
+        public void fillBox()
+        {
+            connection.Open();
+            SqlCommand commandbox = new SqlCommand("Select RoomID from Room", connection);
+            SqlDataReader rdr;
+            rdr = commandbox.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("RoomID", typeof(int));
+            dt.Load(rdr);
+            roomcb.ValueMember = "RoomID";
+            roomcb.DataSource = dt;
+            connection.Close();
+        }
+        public void fillClientBox()
+        {
+            connection.Open();
+            SqlCommand commandbox = new SqlCommand("Select CustomerID from Customer", connection);
+            SqlDataReader rdr;
+            rdr = commandbox.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("CustomerID", typeof(string));
+            dt.Load(rdr);
+            Clientcb.ValueMember = "CustomerID";
+            Clientcb.DataSource = dt;
+            connection.Close();
+        }
+
         private void button6_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
@@ -52,7 +79,7 @@ namespace Test
         private void button1_Click(object sender, EventArgs e)
         {
             connection.Open();
-            SqlCommand command = new SqlCommand("insert into [Reservation] values('" + TBCustomerID.Text + "','" + TBCustomerName.Text + "','" + TBCustomerNumber.Text + "','" + dateTimePicker1.Text + "','" + dateTimePicker2.Text + "')", connection);
+            SqlCommand command = new SqlCommand("insert into [Reservation] values('" + TBCustomerID.Text + "','" + Clientcb.SelectedValue.ToString() + "','" + roomcb.SelectedValue.ToString() + "','" + dateTimePicker1.Text + "','" + dateTimePicker2.Text + "')", connection);
             command.ExecuteNonQuery();
             MessageBox.Show("Reservation added Successfully!");
             connection.Close();
@@ -61,6 +88,7 @@ namespace Test
 
         private void button3_Click(object sender, EventArgs e)
         {
+            connection.Open();
             string query = "delete from [Reservation] where ReservationID=" + TBCustomerID.Text + "";
             SqlCommand command = new SqlCommand(query, connection);
             command.ExecuteNonQuery();
@@ -81,9 +109,26 @@ namespace Test
             connection.Close();
         }
 
+        private void TBCustomerID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Clientcb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void Form7_Load(object sender, EventArgs e)
         {
             populate();
+            fillBox();
+            fillClientBox();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

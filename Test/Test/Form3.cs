@@ -13,7 +13,7 @@ namespace Test
 {
     public partial class Form3 : Form
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ionut\source\repos\Test\Test\HotelDataBase.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\FAC\III\IS\is\Test\Test\HotelDataBase.mdf;Integrated Security=True;Connect Timeout=30");
         public Form3()
         {
             InitializeComponent();
@@ -44,6 +44,11 @@ namespace Test
         }
 
         private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
         }

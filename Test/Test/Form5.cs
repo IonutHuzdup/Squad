@@ -66,12 +66,18 @@ namespace Test
 
         private void button3_Click(object sender, EventArgs e)
         {
+            connection.Open();
             string query = "delete from [Employee] where EmployeeID=" + TBCustomerID.Text + "";
             SqlCommand command = new SqlCommand(query, connection);
             command.ExecuteNonQuery();
             MessageBox.Show("Employee deleted Successfully!");
             connection.Close();
             populate();
+        }
+
+        private void TBCustomerID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

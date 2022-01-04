@@ -98,5 +98,10 @@ namespace Test
             dataGridView1.DataSource = dataSet.Tables[0];
             connection.Close();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
